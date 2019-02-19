@@ -1,0 +1,2 @@
+* [Home](/)
+* [Omzet](omzet.md)

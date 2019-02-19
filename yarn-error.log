@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/abel/.nvm/versions/node/v8.12.0/bin/node /usr/local/Cellar/yarn/1.12.3/libexec/bin/yarn.js add docisfy-cli --global
+
+PATH: 
+  /Users/abel/.nvm/versions/node/v8.12.0/bin:/Users/abel/.rvm/gems/ruby-2.6.1/bin:/Users/abel/.rvm/gems/ruby-2.6.1@global/bin:/Users/abel/.rvm/rubies/ruby-2.6.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/abel/.rvm/bin:/Users/abel/Library/Android/sdk/tools:/Users/abel/.rvm/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  8.12.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/docisfy-cli: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:65894:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129018:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129990:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.12.3/libexec/lib/cli.js:129912:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
