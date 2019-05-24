@@ -1,16 +1,17 @@
 # Automatisch omzet inschieten
 
 ## Authenticatie
-Voordat je iets kan doen, moet de klant in eitje zijn omzet API-key & inlognaam vinden en die in jouw systeem invoeren. In eitje is dit te vinden onder 'bedrijf' en vervolgens 'omzetkoppeling'. Zodra de klant dit heeft gedaan, kunnen we beginnen met het synchroniseren van de omzetgroepen.
+Before you can do anything, the customer has to obtain his API-key & login name in eitje. You can find it under 'Settings' > 'Company settings' > 'Revenue integration'. After the customer has done all this, we can start the synchronization of revenue groups.
 
-Bij elke call zijn de volgende paramaters dan ook verplicht, anders krijg je een 401:
+
+These paramaters are mandatory for every call, otherwise we can't authorize your application:
 
 ```
 env_name: string,
 revenue_key string,
 ```
 
-## Synchroniseren van omzetgroepen
+## Synchronizing revenue groups
 
 Endpoint:
 
@@ -24,11 +25,16 @@ Parameters:
 
 groups: {
 	name: string,
-	id: (string|number)
+	id: (string|number),
+	cash_registers: [
+		name: string,
+		id: (string|number),
+	]
 }
 ```
 
-> Het ID is cruciaal: daarmee gaan wij de koppeling maken tussen de omzetgroepen, dus zorg dat dit een uniek veld is en dat het onveranderlijk is. Je mag zelf bepalen of het een string of number is. De naam kan wel veranderen zonder gevolgen, die wordt gebruikt om de klant in eitje makkelijk de groepen te laten koppelen.
+> The ID is crucial for the integration because we use it to sync the revenue groups from your system to those in our system. Make sure this field is unique & never changes. Its type can be a string or a number, that's up to you. The name can change without any difficulties, as it's only used to make it easier for customers in the eitje UI. The cash registers are also mandatory, because the customer needs them to specify their revenue per cash register.
+
 
 
 
@@ -38,7 +44,7 @@ groups: {
 
 ## Doorzetten van omzet
 
-> Voordat je dit kan doen, moet de klant eerst in eitje de omzetgroepen aan elkaar koppelen.
+> Before you can do this, the customer first has to have linked the revenue groups in eitje. 
 
 Endpoint:
 
@@ -57,5 +63,4 @@ date: string, format: (DD/MM/YYYY OR YYYY/MM/DD)
 
 ```
 
-> Let er op dat het bedrag in centen moet worden ingeschoten en dat je het juiste datumformat aanhoudt. 
-
+> Pay attention that you always report the revenue in CENTS, and that you use the correct date format. 
