@@ -1,2 +1,2 @@
 * [Home](/)
-* [Omzet](omzet.md)
+* [Revenue](omzet.md)
