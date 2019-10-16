@@ -56,12 +56,12 @@ POST /partners/revenue
 Parameters:
 
 ```
-cash_registers: {
+cash_registers: [{
 	id: (string|number),
 	revenue_groups: [
 		{id: (string|number), amount_in_cents: number},
 	],
-},
+}],
 date: string(DD/MM/YYYY || YYYY/MM/DD)
 
 ```
